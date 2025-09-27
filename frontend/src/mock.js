@@ -11,10 +11,10 @@ export const portfolioData = {
   },
   
   about: {
-    intro: "Passionate Data Scientist with expertise in Machine Learning, NLP, and Real-time Data Processing. Currently pursuing M.Sc in Data Science with hands-on experience in building AI-powered applications and scalable data pipelines.",
+    intro: "Ambitious and driven data science enthusiast having a solid background in statistics, machine learning, and data visualization. Proficient in R, Python, and SQL to mine complex data sets for useful insights.",
     highlights: [
       "Specialized in AI-assisted text detection and NLP research",
-      "Built scalable real-time data pipelines processing 1M+ records/hour",
+      "Recent Post-Graduate in Data Science (M.Sc Data Science)",
       "Expert in Python, Machine Learning, and Data Visualization",
       "Published research in AI-generated text detection"
     ]
