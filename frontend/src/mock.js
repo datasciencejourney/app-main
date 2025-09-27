@@ -41,7 +41,22 @@ export const portfolioData = {
         "Research paper under review for publication",
         "Power BI dashboards for model performance monitoring"
       ],
-      category: "AI/ML"
+      category: "AI/ML",
+      githubUrl: "https://github.com/datasciencejourney/AI-Text-Detector"
+    },
+    {
+      id: 2,
+      title: "Extractive Hindi Text Summarization Using NLP",
+      description: "Developed an extractive text summarization project for Hindi language using NLP techniques, TextRank, and BERT-based embeddings. Curated a diverse dataset of 1,000 Hindi articles and implemented preprocessing pipelines using Indic NLP and iNLTK.",
+      technologies: ["Natural Language Processing (NLP)", "NLP Libraries", "Text Summarization", "Machine Learning Algorithms", "Data Pre-processing", "Data Visualization", "Python", "BERT", "TextRank"],
+      highlights: [
+        "Enhanced user experience for Hindi speakers",
+        "Contributed to Hindi NLP ecosystem",
+        "Cloud deployment using Google Colab and Hugging Face",
+        "Quality assessment using ROUGE metrics"
+      ],
+      category: "NLP",
+      githubUrl: "https://github.com/datasciencejourney/hindi-text-summarization"
     },
     {
       id: 2,
