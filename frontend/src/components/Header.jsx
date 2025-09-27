@@ -35,12 +35,40 @@ const Header = () => {
       }`}>
         <nav className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            {/* Logo */}
-            <div 
-              className="text-2xl font-bold text-white cursor-pointer hover:text-cyan-400 transition-colors duration-300"
-              onClick={() => scrollToSection('hero')}
-            >
-              LR
+            {/* Logo with Social Links */}
+            <div className="flex items-center space-x-4">
+              <div 
+                className="text-2xl font-bold text-white cursor-pointer hover:text-cyan-400 transition-colors duration-300"
+                onClick={() => scrollToSection('hero')}
+              >
+                LR
+              </div>
+              
+              {/* Social Icons */}
+              <div className="flex items-center space-x-3">
+                <a
+                  href="https://github.com/datasciencejourney"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/70 hover:text-cyan-400 transition-colors duration-300"
+                >
+                  <Github className="w-5 h-5" />
+                </a>
+                <a
+                  href="mailto:lovelynarenderramchandani@gmail.com"
+                  className="text-white/70 hover:text-cyan-400 transition-colors duration-300"
+                >
+                  <Mail className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://wa.me/918600756348"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/70 hover:text-cyan-400 transition-colors duration-300"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                </a>
+              </div>
             </div>
 
             {/* Desktop Navigation */}
