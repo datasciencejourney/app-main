@@ -7,6 +7,7 @@ const Projects = () => {
 
   const categoryColors = {
     'AI/ML': 'from-purple-500/20 to-pink-500/20',
+    'NLP': 'from-indigo-500/20 to-purple-500/20',
     'Analytics': 'from-blue-500/20 to-cyan-500/20',
     'Big Data': 'from-green-500/20 to-teal-500/20'
   };
