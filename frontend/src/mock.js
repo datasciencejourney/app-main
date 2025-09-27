@@ -59,7 +59,7 @@ export const portfolioData = {
       githubUrl: "https://github.com/datasciencejourney/hindi-text-summarization"
     },
     {
-      id: 2,
+      id: 3,
       title: "Sales Insights - Data Analysis Project",
       description: "Processed over 1 lakh sales records for analyzing sales trends and patterns to identify key performance drivers. Delivered actionable insights that contributed to a potential 15% revenue increase in underperforming regions.",
       technologies: ["Python", "Pandas", "NumPy", "Matplotlib", "Power BI", "MySQL"],
@@ -69,10 +69,11 @@ export const portfolioData = {
         "Interactive dashboards for stakeholder insights",
         "Key performance driver analysis"
       ],
-      category: "Analytics"
+      category: "Analytics",
+      githubUrl: "https://github.com/datasciencejourney/sales_insights"
     },
     {
-      id: 3,
+      id: 4,
       title: "Real-Time Data Pipeline",
       description: "Architected and implemented a scalable real-time data processing pipeline handling 1M+ records per hour. Achieved 99.5% data processing reliability through robust error handling and recovery mechanisms.",
       technologies: ["Apache Kafka", "Apache Spark", "Python", "PySpark", "SQL", "Structured Streaming"],
@@ -82,7 +83,8 @@ export const portfolioData = {
         "Reduced data latency from 15min to <2min",
         "Robust error handling and recovery"
       ],
-      category: "Big Data"
+      category: "Big Data",
+      githubUrl: "https://github.com/datasciencejourney/Real-Time-Data-Pipeline-Leveraging-Apache-Spark-and-Kafka.-master"
     }
   ],
   
