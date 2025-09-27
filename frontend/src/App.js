@@ -1,52 +1,82 @@
-import { useEffect } from "react";
-import "@/App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import axios from "axios";
+import React, { useEffect } from 'react';
+import './App.css';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import About from './components/About';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Experience from './components/Experience';
+import Certifications from './components/Certifications';
+import Contact from './components/Contact';
+import FloatingCodeSnippets from './components/FloatingCodeSnippets';
 
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
-
-const Home = () => {
-  const helloWorldApi = async () => {
-    try {
-      const response = await axios.get(`${API}/`);
-      console.log(response.data.message);
-    } catch (e) {
-      console.error(e, `errored out requesting / api`);
-    }
-  };
-
+function App() {
   useEffect(() => {
-    helloWorldApi();
+    // Add smooth scrolling behavior
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    // Parallax effect for sections
+    const handleScroll = () => {
+      const scrolled = window.pageYOffset;
+      const parallaxElements = document.querySelectorAll('.parallax');
+      
+      parallaxElements.forEach((element) => {
+        const speed = element.dataset.speed || 0.5;
+        const yPos = -(scrolled * speed);
+        element.style.transform = `translateY(${yPos}px)`;
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <div>
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://emergent.sh"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4" />
-        </a>
-        <p className="mt-5">Building something incredible ~!</p>
-      </header>
-    </div>
-  );
-};
-
-function App() {
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+    <div className="App relative bg-black text-white overflow-x-hidden">
+      {/* Floating code snippets background */}
+      <FloatingCodeSnippets />
+      
+      {/* Header */}
+      <Header />
+      
+      {/* Main Content */}
+      <main className="relative z-10">
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Certifications />
+        <Contact />
+      </main>
+      
+      {/* Footer */}
+      <footer className="bg-black border-t border-cyan-400/20 py-12 relative z-10">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center">
+            <div className="text-2xl font-bold text-white mb-4">
+              Lovely Ramchandani
+            </div>
+            <p className="text-white/60 mb-6">
+              Data Scientist | Machine Learning Engineer | AI Researcher
+            </p>
+            <div className="flex justify-center space-x-6 mb-6">
+              <a href="mailto:lovelynarenderramchandani@gmail.com" className="text-white/60 hover:text-cyan-400 transition-colors duration-300">
+                Email
+              </a>
+              <a href="https://linkedin.com/in/LovelyNarendraRamchandani" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-cyan-400 transition-colors duration-300">
+                LinkedIn
+              </a>
+              <a href="https://github.com/LovelyRamchandani" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-cyan-400 transition-colors duration-300">
+                GitHub
+              </a>
+            </div>
+            <div className="text-white/40 text-sm">
+              © 2025 Lovely Ramchandani. All rights reserved.
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
