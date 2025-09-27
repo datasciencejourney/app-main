@@ -94,11 +94,20 @@ const Projects = () => {
                 </div>
                 
                 {/* Action Buttons */}
-                <div className="flex space-x-4">
+                <div className="flex space-x-3">
                   <button className="flex items-center space-x-2 bg-cyan-400/20 hover:bg-cyan-400 text-cyan-400 hover:text-black px-4 py-2 rounded transition-all duration-300 text-sm font-medium">
                     <span>View Details</span>
                     <ExternalLink className="w-4 h-4" />
                   </button>
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 bg-white/10 hover:bg-white hover:text-black text-white px-4 py-2 rounded transition-all duration-300 text-sm font-medium"
+                  >
+                    <span>View Code</span>
+                    <Github className="w-4 h-4" />
+                  </a>
                 </div>
               </div>
             </div>
