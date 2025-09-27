@@ -72,21 +72,8 @@ const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        {/* Name with glowing effect */}
-        <div className="mb-8">
-          <h1 
-            ref={nameRef}
-            className="text-6xl md:text-8xl font-bold text-white mb-4 animate-pulse"
-            style={{
-              textShadow: '0 0 20px rgba(0, 255, 209, 0.5), 0 0 40px rgba(0, 255, 209, 0.3), 0 0 60px rgba(0, 255, 209, 0.2)'
-            }}
-          >
-            {portfolioData.personal.name}
-          </h1>
-        </div>
-        
         {/* Animated intro text */}
-        <div className="mb-12">
+        <div className="mb-8">
           <p className="text-xl md:text-2xl text-white/90 mb-6 leading-relaxed">
             {portfolioData.about.intro}
           </p>
@@ -105,13 +92,26 @@ const Hero = () => {
           </div>
         </div>
         
-        {/* CTA Button */}
+        {/* Name with glowing effect - positioned closer to button */}
+        <div className="mb-8">
+          <h1 
+            ref={nameRef}
+            className="text-6xl md:text-8xl font-bold text-white mb-6 animate-pulse"
+            style={{
+              textShadow: '0 0 20px rgba(0, 255, 209, 0.5), 0 0 40px rgba(0, 255, 209, 0.3), 0 0 60px rgba(0, 255, 209, 0.2)'
+            }}
+          >
+            {portfolioData.personal.name}
+          </h1>
+        </div>
+        
+        {/* CTA Button - Made more prominent */}
         <div className="mb-16">
           <button 
             onClick={scrollToAbout}
-            className="bg-cyan-400 hover:bg-white text-black px-8 py-4 text-lg font-semibold transition-all duration-400 transform hover:scale-105 hover:shadow-lg"
+            className="bg-cyan-400 hover:bg-white text-black px-10 py-5 text-xl font-bold transition-all duration-400 transform hover:scale-110 hover:shadow-2xl"
             style={{
-              boxShadow: '0 0 30px rgba(0, 255, 209, 0.3)'
+              boxShadow: '0 0 40px rgba(0, 255, 209, 0.5), 0 0 80px rgba(0, 255, 209, 0.3)'
             }}
           >
             Explore My Work
