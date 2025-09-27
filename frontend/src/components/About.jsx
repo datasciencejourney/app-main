@@ -57,9 +57,10 @@ const About = () => {
               </p>
               
               <p className="text-lg text-white/80 leading-relaxed">
-                Currently based in {portfolioData.personal.location}, I'm passionate about leveraging 
-                cutting-edge technologies to solve complex data challenges and create meaningful insights 
-                that drive business value.
+                Currently based in {portfolioData.personal.location}, I leverage cutting-edge technologies 
+                to solve complex data challenges and create meaningful insights that drive business value. 
+                With strong analytical skills and a passion for continuous learning, I excel at transforming 
+                raw data into actionable intelligence.
               </p>
             </div>
             
