@@ -63,15 +63,11 @@ const About = () => {
               </p>
             </div>
             
-            {/* Stats */}
-            <div className="grid grid-cols-2 gap-6">
+            {/* Professional Focus Areas */}
+            <div className="grid grid-cols-1 gap-4">
               <div className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 text-center transform hover:scale-105 transition-all duration-300">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">92.5%</div>
-                <div className="text-white/80 text-sm">AI Detection Accuracy</div>
-              </div>
-              <div className="bg-white/5 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 text-center transform hover:scale-105 transition-all duration-300">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">1M+</div>
-                <div className="text-white/80 text-sm">Records Processed/Hour</div>
+                <div className="text-lg font-bold text-cyan-400 mb-2">Recent Post-Graduate</div>
+                <div className="text-white/80 text-sm">M.Sc Data Science</div>
               </div>
             </div>
           </div>
