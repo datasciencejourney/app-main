@@ -165,6 +165,25 @@ const Projects = () => {
                 </div>
               </div>
             </div>
+            
+            {/* Modal Action Buttons */}
+            <div className="flex justify-center space-x-4">
+              <button 
+                onClick={() => setSelectedProject(null)}
+                className="bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded transition-all duration-300 font-medium"
+              >
+                Close
+              </button>
+              <a
+                href={selectedProject.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 bg-cyan-400 hover:bg-white text-black px-6 py-3 rounded transition-all duration-300 font-medium"
+              >
+                <span>View Code</span>
+                <Github className="w-5 h-5" />
+              </a>
+            </div>
           </div>
         </div>
       )}
