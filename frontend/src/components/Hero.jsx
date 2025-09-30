@@ -87,7 +87,7 @@ const Hero = () => {
             ref={nameRef}
             className="font-bold text-white mb-6 animate-pulse"
             style={{
-              fontSize: '40px',
+              fontSize: '45px',
               textShadow: '0 0 20px rgba(0, 255, 209, 0.5), 0 0 40px rgba(0, 255, 209, 0.3), 0 0 60px rgba(0, 255, 209, 0.2)'
             }}
           >
@@ -97,7 +97,7 @@ const Hero = () => {
 
         {/* Animated intro text */}
         <div className="mb-8">
-          <p className="text-xl md:text-2xl text-white/90 mb-6 leading-relaxed">
+          <p className="text-lg md:text-xl text-white/90 mb-6 leading-relaxed">
             {portfolioData.about.intro}
           </p>
           
