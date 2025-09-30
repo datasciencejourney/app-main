@@ -48,7 +48,7 @@ export const portfolioData = {
     {
       id: 2,
       title: "Extractive Hindi Text Summarization Using NLP",
-      description: "Developed an extractive text summarization project for Hindi language using NLP techniques, TextRank, and BERT-based embeddings. Curated a diverse dataset of 1,000 Hindi articles and implemented preprocessing pipelines using Indic NLP and iNLTK.",
+      description: "Associated with REVA University - Developed an extractive text summarization project for Hindi language using NLP techniques, TextRank, and BERT-based embeddings. Curated a diverse dataset of 1,000 Hindi articles and implemented preprocessing pipelines using Indic NLP and iNLTK. Deployed the solution using cloud-based tools like Google Colab and Hugging Face, enhancing user experience and information accessibility for Hindi speakers. Contributed to the Hindi NLP ecosystem by addressing gaps in tools, datasets, and models, and objectively assessing summary quality using ROUGE metrics.",
       technologies: ["Natural Language Processing (NLP)", "NLP Libraries", "Text Summarization", "Machine Learning Algorithms", "Data Pre-processing", "Data Visualization", "Python", "BERT", "TextRank"],
       highlights: [
         "Enhanced user experience for Hindi speakers",
