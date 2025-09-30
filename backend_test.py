@@ -204,10 +204,14 @@ class BackendTester:
                 self.log_test("Backend Serving - URL accessibility", True,
                             f"Backend accessible at {self.base_url}")
                 
-                # Test CORS headers
-                if 'access-control-allow-origin' in response.headers:
+                # Test CORS headers with proper request
+                cors_response = self.session.get(
+                    f"{self.base_url}/",
+                    headers={"Origin": "https://example.com"}
+                )
+                if 'access-control-allow-origin' in cors_response.headers:
                     self.log_test("Backend Serving - CORS configuration", True,
-                                "CORS headers present")
+                                f"CORS headers present: {cors_response.headers.get('access-control-allow-origin')}")
                 else:
                     self.log_test("Backend Serving - CORS configuration", False,
                                 "CORS headers missing")
