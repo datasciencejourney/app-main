@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { portfolioData } from '../mock';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, ExternalLink, Download } from 'lucide-react';
 
 const Hero = () => {
   const canvasRef = useRef(null);
@@ -62,6 +62,15 @@ const Hero = () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = 'https://customer-assets.emergentagent.com/job_repo-clone-24/artifacts/88qioqh7_CV%20-%20LovelyRamchandani%20%28ML%29.pdf';
+    link.download = 'CV-LovelyRamchandani-ML.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Digital Rain Background */}
@@ -92,12 +101,13 @@ const Hero = () => {
           </div>
         </div>
         
-        {/* Name with glowing effect - positioned closer to button */}
-        <div className="mb-8">
+        {/* Name with glowing effect - moved down with 2cm space and 40px font */}
+        <div className="mb-8" style={{ marginTop: '2cm' }}>
           <h1 
             ref={nameRef}
-            className="text-6xl md:text-8xl font-bold text-white mb-6 animate-pulse"
+            className="font-bold text-white mb-6 animate-pulse"
             style={{
+              fontSize: '40px',
               textShadow: '0 0 20px rgba(0, 255, 209, 0.5), 0 0 40px rgba(0, 255, 209, 0.3), 0 0 60px rgba(0, 255, 209, 0.2)'
             }}
           >
@@ -105,17 +115,37 @@ const Hero = () => {
           </h1>
         </div>
         
-        {/* CTA Button - Made more prominent */}
+        {/* CTA Buttons - Modified to include all three buttons */}
         <div className="mb-16">
-          <button 
-            onClick={scrollToAbout}
-            className="bg-cyan-400 hover:bg-white text-black px-10 py-5 text-xl font-bold transition-all duration-400 transform hover:scale-110 hover:shadow-2xl"
-            style={{
-              boxShadow: '0 0 40px rgba(0, 255, 209, 0.5), 0 0 80px rgba(0, 255, 209, 0.3)'
-            }}
-          >
-            Explore My Work
-          </button>
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+            <button 
+              onClick={scrollToAbout}
+              className="bg-cyan-400 hover:bg-white text-black px-10 py-5 text-xl font-bold transition-all duration-400 transform hover:scale-110 hover:shadow-2xl"
+              style={{
+                boxShadow: '0 0 40px rgba(0, 255, 209, 0.5), 0 0 80px rgba(0, 255, 209, 0.3)'
+              }}
+            >
+              Explore My Work
+            </button>
+            
+            <a 
+              href="https://www.linkedin.com/in/lovelyr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 bg-white/10 hover:bg-cyan-400 hover:text-black text-white px-6 py-3 text-lg font-bold transition-all duration-400 transform hover:scale-110"
+            >
+              <ExternalLink className="w-5 h-5" />
+              <span>Get in touch</span>
+            </a>
+            
+            <button 
+              onClick={handleDownloadCV}
+              className="flex items-center space-x-2 bg-white/10 hover:bg-cyan-400 hover:text-black text-white px-6 py-3 text-lg font-bold transition-all duration-400 transform hover:scale-110"
+            >
+              <Download className="w-5 h-5" />
+              <span>Download CV</span>
+            </button>
+          </div>
         </div>
         
         {/* Scroll indicator */}
