@@ -6,8 +6,9 @@ export const portfolioData = {
     location: "Bengaluru, Karnataka",
     email: "lovelynarenderramchandani@gmail.com",
     phone: "+918600756348",
-    linkedin: "https://linkedin.com/in/LovelyNarendraRamchandani",
-    github: "https://github.com/LovelyRamchandani"
+    linkedin: "https://www.linkedin.com/in/lovelyr",
+    github: "https://github.com/datasciencejourney",
+    whatsapp: "+918600756348"
   },
   
   about: {
