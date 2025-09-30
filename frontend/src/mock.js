@@ -106,7 +106,7 @@ export const portfolioData = {
     },
     {
       type: "education",
-      title: "M.Sc Data Science",
+      title: "Recent Post-Graduate in Data Science (M.Sc Data Science)",
       company: "REVA University",
       duration: "Sep 2023 – Jul 2025",
       description: "Master of Science in Data Science with focus on Machine Learning, NLP, and Advanced Analytics.",
