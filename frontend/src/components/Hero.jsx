@@ -101,8 +101,8 @@ const Hero = () => {
           </div>
         </div>
         
-        {/* Name with glowing effect - moved down with 2cm space and 40px font */}
-        <div className="mb-8" style={{ marginTop: '2cm' }}>
+        {/* Name with glowing effect - small gap from header and 40px font */}
+        <div className="mb-8 pt-16">
           <h1 
             ref={nameRef}
             className="font-bold text-white mb-6 animate-pulse"
