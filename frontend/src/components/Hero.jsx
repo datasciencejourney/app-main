@@ -81,6 +81,20 @@ const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+        {/* Name with glowing effect - positioned at the top with small gap from header */}
+        <div className="mb-8 pt-16">
+          <h1 
+            ref={nameRef}
+            className="font-bold text-white mb-6 animate-pulse"
+            style={{
+              fontSize: '40px',
+              textShadow: '0 0 20px rgba(0, 255, 209, 0.5), 0 0 40px rgba(0, 255, 209, 0.3), 0 0 60px rgba(0, 255, 209, 0.2)'
+            }}
+          >
+            {portfolioData.personal.name}
+          </h1>
+        </div>
+
         {/* Animated intro text */}
         <div className="mb-8">
           <p className="text-xl md:text-2xl text-white/90 mb-6 leading-relaxed">
@@ -99,20 +113,6 @@ const Hero = () => {
               </div>
             ))}
           </div>
-        </div>
-        
-        {/* Name with glowing effect - small gap from header and 40px font */}
-        <div className="mb-8 pt-16">
-          <h1 
-            ref={nameRef}
-            className="font-bold text-white mb-6 animate-pulse"
-            style={{
-              fontSize: '40px',
-              textShadow: '0 0 20px rgba(0, 255, 209, 0.5), 0 0 40px rgba(0, 255, 209, 0.3), 0 0 60px rgba(0, 255, 209, 0.2)'
-            }}
-          >
-            {portfolioData.personal.name}
-          </h1>
         </div>
         
         {/* CTA Buttons - Modified to include all three buttons */}
